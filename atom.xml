@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://thislife001.github.io/"/>
-  <updated>2018-09-14T08:57:48.300Z</updated>
+  <updated>2018-09-14T09:01:47.189Z</updated>
   <id>https://thislife001.github.io/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="https://thislife001.github.io/2018/09/14/kubernetes/"/>
     <id>https://thislife001.github.io/2018/09/14/kubernetes/</id>
     <published>2018-09-14T07:45:25.000Z</published>
-    <updated>2018-09-14T08:57:48.300Z</updated>
+    <updated>2018-09-14T09:01:47.189Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;本次介绍使用kubeadm部署kubernetes&lt;br&gt;环境介绍：&lt;br&gt;    1.准备3台服务器（本实验使用虚拟机）一个master，两个node；&lt;br&gt;    2.各节点主机名称解析：DNS或者hosts（本人hosts）；&lt;br&gt;    3.各节点iptables及firewalld服务disable；&lt;br&gt;    4.各节点时间同步；&lt;br&gt;    5.配置master和node的免密登陆；&lt;br&gt;一、配置kubernetes及docker的yum仓库(master和node都需要配置)：&lt;br&gt;    1.docker仓库配置；&lt;br&gt;    &lt;figure class=&quot;highlight gradle&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@master ~]# wget -P &lt;span class=&quot;regexp&quot;&gt;/etc/yum&lt;/span&gt;.repos.d&lt;span class=&quot;regexp&quot;&gt;/ https:/&lt;/span&gt;&lt;span class=&quot;regexp&quot;&gt;/mirrors.aliyun.com/&lt;/span&gt;docker-ce&lt;span class=&quot;regexp&quot;&gt;/linux/&lt;/span&gt;centos&lt;span class=&quot;regexp&quot;&gt;/docker-ce.repo&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+      &lt;p&gt;本次介绍使用kubeadm部署kubernetes集群&lt;br&gt;环境介绍：&lt;br&gt;    1.准备3台服务器（本实验使用虚拟机）一个master，两个node；&lt;br&gt;    2.各节点主机名称解析：DNS或者hosts（本人hosts）；&lt;br&gt;    3.各节点iptables及firewalld服务disable；&lt;br&gt;    4.各节点时间同步；&lt;br&gt;    5.配置master和node的免密登陆；&lt;br&gt;一、配置kubernetes及docker的yum仓库(master和node都需要配置)：&lt;br&gt;    1.docker仓库配置；&lt;br&gt;    &lt;figure class=&quot;highlight gradle&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@master ~]# wget -P &lt;span class=&quot;regexp&quot;&gt;/etc/yum&lt;/span&gt;.repos.d&lt;span class=&quot;regexp&quot;&gt;/ https:/&lt;/span&gt;&lt;span class=&quot;regexp&quot;&gt;/mirrors.aliyun.com/&lt;/span&gt;docker-ce&lt;span class=&quot;regexp&quot;&gt;/linux/&lt;/span&gt;centos&lt;span class=&quot;regexp&quot;&gt;/docker-ce.repo&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
     </summary>
     

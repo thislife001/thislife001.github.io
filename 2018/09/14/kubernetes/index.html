@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="本次介绍使用kubeadm部署kubernetes环境介绍：    1.准备3台服务器（本实验使用虚拟机）一个master，两个node；    2.各节点主机名称解析：DNS或者hosts（本人hosts）；    3.各节点iptables及firewalld服务disable；    4.各节点时间同步；    5.配置master和node的免密登陆；一、配置kubernetes及dock">
+<meta name="description" content="本次介绍使用kubeadm部署kubernetes集群环境介绍：    1.准备3台服务器（本实验使用虚拟机）一个master，两个node；    2.各节点主机名称解析：DNS或者hosts（本人hosts）；    3.各节点iptables及firewalld服务disable；    4.各节点时间同步；    5.配置master和node的免密登陆；一、配置kubernetes及do">
 <meta name="keywords" content="kubernetes">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用kubeadm部署kubernetes">
 <meta property="og:url" content="https://thislife001.github.io/2018/09/14/kubernetes/index.html">
 <meta property="og:site_name" content="This is life">
-<meta property="og:description" content="本次介绍使用kubeadm部署kubernetes环境介绍：    1.准备3台服务器（本实验使用虚拟机）一个master，两个node；    2.各节点主机名称解析：DNS或者hosts（本人hosts）；    3.各节点iptables及firewalld服务disable；    4.各节点时间同步；    5.配置master和node的免密登陆；一、配置kubernetes及dock">
+<meta property="og:description" content="本次介绍使用kubeadm部署kubernetes集群环境介绍：    1.准备3台服务器（本实验使用虚拟机）一个master，两个node；    2.各节点主机名称解析：DNS或者hosts（本人hosts）；    3.各节点iptables及firewalld服务disable；    4.各节点时间同步；    5.配置master和node的免密登陆；一、配置kubernetes及do">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-14T08:57:48.300Z">
+<meta property="og:updated_time" content="2018-09-14T09:01:47.189Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用kubeadm部署kubernetes">
-<meta name="twitter:description" content="本次介绍使用kubeadm部署kubernetes环境介绍：    1.准备3台服务器（本实验使用虚拟机）一个master，两个node；    2.各节点主机名称解析：DNS或者hosts（本人hosts）；    3.各节点iptables及firewalld服务disable；    4.各节点时间同步；    5.配置master和node的免密登陆；一、配置kubernetes及dock">
+<meta name="twitter:description" content="本次介绍使用kubeadm部署kubernetes集群环境介绍：    1.准备3台服务器（本实验使用虚拟机）一个master，两个node；    2.各节点主机名称解析：DNS或者hosts（本人hosts）；    3.各节点iptables及firewalld服务disable；    4.各节点时间同步；    5.配置master和node的免密登陆；一、配置kubernetes及do">
 
 
 
@@ -326,7 +326,7 @@
       
 
       
-        <p>本次介绍使用kubeadm部署kubernetes<br>环境介绍：<br>    1.准备3台服务器（本实验使用虚拟机）一个master，两个node；<br>    2.各节点主机名称解析：DNS或者hosts（本人hosts）；<br>    3.各节点iptables及firewalld服务disable；<br>    4.各节点时间同步；<br>    5.配置master和node的免密登陆；<br>一、配置kubernetes及docker的yum仓库(master和node都需要配置)：<br>    1.docker仓库配置；<br>    <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# wget -P <span class="regexp">/etc/yum</span>.repos.d<span class="regexp">/ https:/</span><span class="regexp">/mirrors.aliyun.com/</span>docker-ce<span class="regexp">/linux/</span>centos<span class="regexp">/docker-ce.repo</span></span><br></pre></td></tr></table></figure></p>
+        <p>本次介绍使用kubeadm部署kubernetes集群<br>环境介绍：<br>    1.准备3台服务器（本实验使用虚拟机）一个master，两个node；<br>    2.各节点主机名称解析：DNS或者hosts（本人hosts）；<br>    3.各节点iptables及firewalld服务disable；<br>    4.各节点时间同步；<br>    5.配置master和node的免密登陆；<br>一、配置kubernetes及docker的yum仓库(master和node都需要配置)：<br>    1.docker仓库配置；<br>    <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# wget -P <span class="regexp">/etc/yum</span>.repos.d<span class="regexp">/ https:/</span><span class="regexp">/mirrors.aliyun.com/</span>docker-ce<span class="regexp">/linux/</span>centos<span class="regexp">/docker-ce.repo</span></span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <p>2.kubernetes仓库配置：<br>在/etc/yum.repos.d下创建kubernetes.repo文件，编辑添加如下内容：<br>    <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[root@master ~]</span><span class="comment"># vim /etc/yum.repos.d/kubernetes.repo </span></span><br><span class="line"><span class="attr">name</span>=Kubernetes Repo</span><br><span class="line"><span class="attr">baseurl</span>=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x<span class="number">86_64</span>/</span><br><span class="line"><span class="attr">gpgcheck</span>=<span class="number">0</span></span><br><span class="line"><span class="attr">gpgkey</span>=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg</span><br><span class="line"><span class="attr">enabled</span>=<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
 <p>二、安装master程序包：<br>    <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@<span class="keyword">master</span> <span class="title">~]# yum</span> install docker-ce kubelet kubectl kubeadm -y</span><br></pre></td></tr></table></figure></p>
