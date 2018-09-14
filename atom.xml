@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>This is life</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://thislife001.github.io/"/>
+  <updated>2018-09-14T08:57:48.300Z</updated>
+  <id>https://thislife001.github.io/</id>
+  
+  <author>
+    <name>Peak Yang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用kubeadm部署kubernetes</title>
+    <link href="https://thislife001.github.io/2018/09/14/kubernetes/"/>
+    <id>https://thislife001.github.io/2018/09/14/kubernetes/</id>
+    <published>2018-09-14T07:45:25.000Z</published>
+    <updated>2018-09-14T08:57:48.300Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本次介绍使用kubeadm部署kubernetes&lt;br&gt;环境介绍：&lt;br&gt;    1.准备3台服务器（本实验使用虚拟机）一个master，两个node；&lt;br&gt;    2.各节点主机名称解析：DNS或者hosts（本人hosts）；&lt;br&gt;    3.各节点iptables及firewalld服务disable；&lt;br&gt;    4.各节点时间同步；&lt;br&gt;    5.配置master和node的免密登陆；&lt;br&gt;一、配置kubernetes及docker的yum仓库(master和node都需要配置)：&lt;br&gt;    1.docker仓库配置；&lt;br&gt;    &lt;figure class=&quot;highlight gradle&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@master ~]# wget -P &lt;span class=&quot;regexp&quot;&gt;/etc/yum&lt;/span&gt;.repos.d&lt;span class=&quot;regexp&quot;&gt;/ https:/&lt;/span&gt;&lt;span class=&quot;regexp&quot;&gt;/mirrors.aliyun.com/&lt;/span&gt;docker-ce&lt;span class=&quot;regexp&quot;&gt;/linux/&lt;/span&gt;centos&lt;span class=&quot;regexp&quot;&gt;/docker-ce.repo&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="kubernetes" scheme="https://thislife001.github.io/tags/kubernetes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>zabbix Centos 7 Agent 安装脚本</title>
+    <link href="https://thislife001.github.io/2018/09/14/zabbix/"/>
+    <id>https://thislife001.github.io/2018/09/14/zabbix/</id>
+    <published>2018-09-14T06:06:27.000Z</published>
+    <updated>2018-09-14T07:50:16.127Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本章的脚本是自己工作中生产环境在Centos 7.4中安装zabbix client的shell脚本，配合ansible使用，仅供参考&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Zabbix" scheme="https://thislife001.github.io/tags/Zabbix/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>随便聊</title>
+    <link href="https://thislife001.github.io/2018/09/06/hello-world/"/>
+    <id>https://thislife001.github.io/2018/09/06/hello-world/</id>
+    <published>2018-09-06T12:59:47.666Z</published>
+    <updated>2018-09-07T09:52:35.376Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;总结个人工作中遇到的问题总结及学习，只是笔记，仅供参考！&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
