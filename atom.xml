@@ -39,17 +39,11 @@
     <link href="https://thislife001.github.io/2018/12/18/elk-es/"/>
     <id>https://thislife001.github.io/2018/12/18/elk-es/</id>
     <published>2018-12-18T09:18:05.000Z</published>
-    <updated>2018-12-19T07:29:10.794Z</updated>
+    <updated>2018-12-19T08:48:57.664Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;本次使用YUM安装：&lt;br&gt;1、安装java8以上版本：&lt;br&gt;2.设置java环境变量：&lt;br&gt;&lt;figure class=&quot;highlight routeros&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
-        
-      
+      &lt;p&gt;本次使用YUM安装：&lt;br&gt;1、安装java8以上版本：&lt;br&gt;2.设置java环境变量：&lt;br&gt;&lt;figure class=&quot;highlight routeros&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@elk-node01 ~]# vi /etc/profile&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#Java Env&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;builtin-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;JAVA_HOME&lt;/span&gt;=/opt/jdk1.8.0_191&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;builtin-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;CLASSPATH&lt;/span&gt;=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;builtin-name&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;PATH&lt;/span&gt;=&lt;span class=&quot;variable&quot;&gt;$PATH&lt;/span&gt;:$JAVA_HOME/bin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[root@elk-node01 ~]# source /etc/profile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
     </summary>
     
