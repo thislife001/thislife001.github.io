@@ -3,6 +3,21 @@
   
     
     <entry>
+      <title>snmp</title>
+      <link href="/2018/12/24/snmp/"/>
+      <url>/2018/12/24/snmp/</url>
+      <content type="html"><![CDATA[<p>snmpwalk 使用方法<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv</span><br></pre></td></tr></table></figure></p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> SNMP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Elasticsearch(增、删、改、查)</title>
       <link href="/2018/12/19/elk-es2/"/>
       <url>/2018/12/19/elk-es2/</url>
