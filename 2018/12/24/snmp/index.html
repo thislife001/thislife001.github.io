@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="snmpwalk 使用方法1snmpwalk  -v 3 -u user -a MD5 -A community -x DES -X community -l authPriv">
+<meta name="description" content="snmpwalk 使用方法                      ifInOctets 输入字节数            ifOutOctets 输出字节数            1234567891011121314snmpwalk  -v 3 -u user -a MD5 -A community -x DES -X community -l authPriv IP OIDsnmpwalk">
 <meta name="keywords" content="SNMP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="snmp">
 <meta property="og:url" content="https://thislife001.github.io/2018/12/24/snmp/index.html">
 <meta property="og:site_name" content="This is life">
-<meta property="og:description" content="snmpwalk 使用方法1snmpwalk  -v 3 -u user -a MD5 -A community -x DES -X community -l authPriv">
+<meta property="og:description" content="snmpwalk 使用方法                      ifInOctets 输入字节数            ifOutOctets 输出字节数            1234567891011121314snmpwalk  -v 3 -u user -a MD5 -A community -x DES -X community -l authPriv IP OIDsnmpwalk">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-24T09:15:36.389Z">
+<meta property="og:updated_time" content="2018-12-25T05:36:30.664Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="snmp">
-<meta name="twitter:description" content="snmpwalk 使用方法1snmpwalk  -v 3 -u user -a MD5 -A community -x DES -X community -l authPriv">
+<meta name="twitter:description" content="snmpwalk 使用方法                      ifInOctets 输入字节数            ifOutOctets 输出字节数            1234567891011121314snmpwalk  -v 3 -u user -a MD5 -A community -x DES -X community -l authPriv IP OIDsnmpwalk">
 
 
 
@@ -326,7 +326,9 @@
       
 
       
-        <p>snmpwalk 使用方法<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv</span><br></pre></td></tr></table></figure></p>
+        <p>snmpwalk 使用方法</p>
+<p><table></table></p>
+<p><thead><br>        <tr><br>            <th>ifInOctets 输入字节数</th><br>            <th>ifOutOctets 输出字节数</th><br>        </tr><br>    </thead><br><br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv<span class="built_in"> IP </span>OID</span><br><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv<span class="built_in"> IP </span>ifDescr #查看所有端口描述信息（可查看端口与所对应的ID号）</span><br><span class="line">-------------------------------------------------------------------------------------------------</span><br><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv<span class="built_in"> IP </span>ifInOctets</span><br><span class="line">查看所有端口进入流量字节数</span><br><span class="line">例如：</span><br><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv<span class="built_in"> IP </span>ifInOctets.10101</span><br><span class="line">IF-MIB::ifInOctets.10101 = Counter32: 2613028369</span><br><span class="line">查看ID号是57的端口进入流量字节数（ID号不一定与端口号对应）</span><br><span class="line">也可以这么写：</span><br><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv<span class="built_in"> IP </span>IF-MIB::ifInOctets.10101</span><br><span class="line">IF-MIB::ifInOctets.10101 = Counter32: 2645393159</span><br><span class="line">-------------------------------------------------------------------------------------------------</span><br><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv<span class="built_in"> IP </span>ifOutOctets</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
