@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://thislife001.github.io/"/>
-  <updated>2018-12-25T05:39:00.170Z</updated>
+  <updated>2018-12-25T05:43:22.175Z</updated>
   <id>https://thislife001.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://thislife001.github.io/2018/12/24/snmp/"/>
     <id>https://thislife001.github.io/2018/12/24/snmp/</id>
     <published>2018-12-24T09:13:30.000Z</published>
-    <updated>2018-12-25T05:39:00.170Z</updated>
+    <updated>2018-12-25T05:43:22.175Z</updated>
     
     <summary type="html">
     
@@ -29,9 +29,7 @@
       
         
         
-          &lt;p&gt;snmpwalk 使用方法&lt;/p&gt;
-&lt;p&gt;&lt;table&gt;&lt;/table&gt;&lt;/p&gt;
-&lt;p&gt;&lt;thead&gt;&lt;br&gt;        &lt;tr&gt;&lt;br&gt;            &lt;th&gt;ifInOctets 输入字节数&lt;br&gt;           
+          &lt;p&gt;snmpwalk 使用方法&lt;br&gt;|ifInOctets 输入字节数|    ifOutOctets 输出字节数|&lt;br&gt;&lt;figure class=&quot;highlight routeros&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
         
       
     
