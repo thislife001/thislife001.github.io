@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://thislife001.github.io/"/>
-  <updated>2018-12-27T09:57:55.133Z</updated>
+  <updated>2018-12-27T09:59:15.035Z</updated>
   <id>https://thislife001.github.io/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="https://thislife001.github.io/2018/12/27/ansible/"/>
     <id>https://thislife001.github.io/2018/12/27/ansible/</id>
     <published>2018-12-27T08:54:28.000Z</published>
-    <updated>2018-12-27T09:57:55.133Z</updated>
+    <updated>2018-12-27T09:59:15.035Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;ansible 安装&lt;/p&gt;
+      &lt;p&gt;Ansible 安装&lt;/p&gt;
 &lt;p&gt;一、安装python环境，我这里安装python3.7.2，可以去官网下在源码包；&lt;br&gt;&lt;a href=&quot;https://www.python.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.python.org/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;1)下载软件包；&lt;br&gt;&lt;figure class=&quot;highlight vim&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@elk-node01]# wget http&lt;span class=&quot;variable&quot;&gt;s:&lt;/span&gt;//www.&lt;span class=&quot;keyword&quot;&gt;python&lt;/span&gt;.org/ftp/&lt;span class=&quot;keyword&quot;&gt;python&lt;/span&gt;/&lt;span class=&quot;number&quot;&gt;3.7&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;/Python-&lt;span class=&quot;number&quot;&gt;3.7&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;.tar.xz&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
