@@ -255,6 +255,137 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://thislife001.github.io/2018/12/27/ansible/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Peak Yang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="This is life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/27/ansible/" itemprop="url">ansible</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-27T16:54:28+08:00">
+                2018-12-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>ansible 安装</p>
+<p>一、安装python环境，我这里安装python3.7.2，可以去官网下在源码包；<br><a href="https://www.python.org/" target="_blank" rel="noopener">https://www.python.org/</a><br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>)下载软件包；</span><br></pre></td></tr></table></figure></p>
+<p>[root@elk-node01]# wget <a href="https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tar.xz" target="_blank" rel="noopener">https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tar.xz</a><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- more --&gt;</span></span><br><span class="line">2）安装依赖；</span><br></pre></td></tr></table></figure></p>
+<p>[root@elk-node01]#yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc*<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span>）解压；</span><br></pre></td></tr></table></figure></p>
+<p>[root@elk-node01]#xz -d Python-3.7.2.tar.xz<br>[root@elk-node01]#tar -xvf Python-3.7.2.tar<br>[root@elk-node01]#cd Python-3.7.2<br>[root@elk-node01]#./configure –prefix=/usr/local/python3.7 –enable-optimizations<br>[root@elk-node01]#make &amp;&amp; make install<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span>)更改系统默认python环境；</span><br></pre></td></tr></table></figure></p>
+<p>[root@elk-node01]#python –version<br>Python 2.7.5<br>注：Centos7.4系统环境的Python版本是2.7，我们要更改为我们安装的Python3.7；<br>[root@elk-node01]#rm -rf /usr/bin/python<br>[root@elk-node01]#ln -s /usr/local/python3.7/bin/python3 /usr/bin/python<br>[root@elk-node01]#python –version<br>Python 3.7.2<br>注：这里已经成为我们安装的版本了；<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span>）更改yum的Python版本；</span><br></pre></td></tr></table></figure></p>
+<p>因为我们更改系统默认版本得Python后yum不能使用，所有我们要更改yum的运行环境；<br>[root@elk-node01]#vi /usr/bin/yum<br>把#!/usr/bin/python更改为#!/usr/bin/python2.7<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6</span>）设置pip环境；</span><br></pre></td></tr></table></figure></p>
+<p>[root@elk-node01]#vi /etc/profile<br>加入一下内容：</p>
+<p>#Pip Env<br>export PIP_HOME=/usr/local/python3.7<br>export PATH=$PATH:$PIP_HOME/bin<br>[root@elk-node01]#source /etc/profile<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">二、安装ansible;</span><br><span class="line">官网地址：<span class="string">https:</span><span class="comment">//www.ansible.com/</span></span><br><span class="line">中文权威指南：<span class="string">http:</span><span class="comment">//www.ansible.com.cn/</span></span><br><span class="line">GitHub项目地址：<span class="string">https:</span><span class="comment">//github.com/ansible/ansible</span></span><br><span class="line"><span class="number">1</span>）下载源码包；</span><br></pre></td></tr></table></figure></p>
+<p>[root@elk-node01]#git clone git://github.com/ansible/ansible.git –recursive<br>[root@elk-node01]#cd ansible<br>[root@elk-node01]#pip install -r ./requirements.txt<br>[root@elk-node01]#python setup.py install<br>[root@elk-node01 ansible]# ansible –version<br>ansible 2.8.0.dev0<br>  config file = None<br>  configured module search path = [‘/root/.ansible/plugins/modules’, ‘/usr/share/ansible/plugins/modules’]<br>  ansible python module location = /usr/local/python3.7/lib/python3.7/site-packages/ansible-2.8.0.dev0-py3.7.egg/ansible<br>  executable location = /usr/local/python3.7/bin/ansible<br>  python version = 3.7.2 (default, Dec 27 2018, 14:24:59) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]<br><code>`</code><br>Done</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://thislife001.github.io/2018/12/24/snmp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -326,7 +457,7 @@
       
         
           
-            <p>snmpwalk 使用方法<br>|ifInOctets 输入字节数|    ifOutOctets 输出字节数<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv<span class="built_in"> IP </span>OID</span><br><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv<span class="built_in"> IP </span>ifDescr #查看所有端口描述信息（可查看端口与所对应的ID号）</span><br><span class="line">-------------------------------------------------------------------------------------------------</span><br><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv<span class="built_in"> IP </span>ifInOctets</span><br><span class="line">查看所有端口进入流量字节数</span><br><span class="line">例如：</span><br><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv<span class="built_in"> IP </span>ifInOctets.10101</span><br><span class="line">IF-MIB::ifInOctets.10101 = Counter32: 2613028369</span><br><span class="line">查看ID号是57的端口进入流量字节数（ID号不一定与端口号对应）</span><br><span class="line">也可以这么写：</span><br><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv<span class="built_in"> IP </span>IF-MIB::ifInOctets.10101</span><br><span class="line">IF-MIB::ifInOctets.10101 = Counter32: 2645393159</span><br><span class="line">-------------------------------------------------------------------------------------------------</span><br><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv<span class="built_in"> IP </span>ifOutOctets</span><br></pre></td></tr></table></figure></p>
+            <p>snmpwalk 使用方法<br>ifIndex 端口索引号<br>ifDescr 端口描述<br>ifType 端口类型<br>ifMtu 最大传输包字节数<br>ifSpeed 端口速度<br>ifPhysAddress 物理地址<br>ifOperStatus 操作状态<br>ifLastChange 上次状态更新时间<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv<span class="built_in"> IP </span>OID</span><br><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv<span class="built_in"> IP </span>ifDescr #查看所有端口描述信息（可查看端口与所对应的ID号）</span><br><span class="line">-------------------------------------------------------------------------------------------------</span><br><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv<span class="built_in"> IP </span>ifInOctets</span><br><span class="line">查看所有端口进入流量字节数</span><br><span class="line">例如：</span><br><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv<span class="built_in"> IP </span>ifInOctets.10101</span><br><span class="line">IF-MIB::ifInOctets.10101 = Counter32: 2613028369</span><br><span class="line">查看ID号是57的端口进入流量字节数（ID号不一定与端口号对应）</span><br><span class="line">也可以这么写：</span><br><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv<span class="built_in"> IP </span>IF-MIB::ifInOctets.10101</span><br><span class="line">IF-MIB::ifInOctets.10101 = Counter32: 2645393159</span><br><span class="line">-------------------------------------------------------------------------------------------------</span><br><span class="line">snmpwalk  -v 3 -u<span class="built_in"> user </span>-a MD5 -A<span class="built_in"> community </span>-x DES -X<span class="built_in"> community </span>-l authPriv<span class="built_in"> IP </span>ifOutOctets</span><br></pre></td></tr></table></figure></p>
 
           
         
@@ -1285,7 +1416,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1298,7 +1429,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

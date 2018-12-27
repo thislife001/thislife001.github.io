@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://thislife001.github.io/"/>
-  <updated>2018-12-25T05:45:52.079Z</updated>
+  <updated>2018-12-27T09:52:00.418Z</updated>
   <id>https://thislife001.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>snmp</title>
-    <link href="https://thislife001.github.io/2018/12/24/snmp/"/>
-    <id>https://thislife001.github.io/2018/12/24/snmp/</id>
-    <published>2018-12-24T09:13:30.000Z</published>
-    <updated>2018-12-25T05:45:52.079Z</updated>
+    <title>ansible</title>
+    <link href="https://thislife001.github.io/2018/12/27/ansible/"/>
+    <id>https://thislife001.github.io/2018/12/27/ansible/</id>
+    <published>2018-12-27T08:54:28.000Z</published>
+    <updated>2018-12-27T09:52:00.418Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,32 @@
       
         
         
-          &lt;p&gt;snmpwalk 使用方法&lt;br&gt;|ifInOctets 输入字节数|    ifOutOctets 输出字节数&lt;br&gt;&lt;figure class=&quot;highlight routeros&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
+          &lt;p&gt;ansible 安装&lt;/p&gt;
+&lt;p&gt;一、安装python环境，我这里安装python3.7.2，可以去官网下在源码包；&lt;br&gt;&lt;a href=&quot;https://www.python.org/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="ansible" scheme="https://thislife001.github.io/tags/ansible/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>snmp</title>
+    <link href="https://thislife001.github.io/2018/12/24/snmp/"/>
+    <id>https://thislife001.github.io/2018/12/24/snmp/</id>
+    <published>2018-12-24T09:13:30.000Z</published>
+    <updated>2018-12-27T09:00:49.046Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;snmpwalk 使用方法&lt;br&gt;ifIndex 端口索引号&lt;br&gt;ifDescr 端口描述&lt;br&gt;ifType 端口类型&lt;br&gt;ifMtu 最大传输包字节数&lt;br&gt;ifSpeed 端口速度&lt;br&gt;ifPhysAddress 物理地址&lt;br&gt;ifOperStatus
         
       
     
