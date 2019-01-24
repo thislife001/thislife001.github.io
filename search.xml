@@ -3,6 +3,21 @@
   
     
     <entry>
+      <title>nginx.service</title>
+      <link href="/2019/01/24/nginx-service/"/>
+      <url>/2019/01/24/nginx-service/</url>
+      <content type="html"><![CDATA[<p>Centos 7中添加自定义nginx启动脚本<br>在/usr/lib/systemd/system/下创建nginx.service<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line"><span class="attribute">Description</span>=Nginx Service</span><br><span class="line"><span class="attribute">After</span>=network.service</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line"><span class="attribute">Type</span>=forking</span><br><span class="line"><span class="attribute">ExecStart</span>=/opt/nginx/sbin/nginx -c /opt/nginx/conf/nginx.conf</span><br><span class="line"><span class="attribute">ExecReload</span>=/opt/nginx/sbin/nginx -s reload</span><br><span class="line"><span class="attribute">ExecStop</span>=/opt/nginx/sbin/nginx -s stop</span><br><span class="line"><span class="attribute">PIDFile</span>=/opt/nginx/logs/nginx.pid</span><br><span class="line"><span class="attribute">PrivateTmp</span>=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line"><span class="attribute">WantedBy</span>=multi-user.target</span><br></pre></td></tr></table></figure></p><p>给nginx.service加754权限</p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>ansible</title>
       <link href="/2018/12/27/ansible/"/>
       <url>/2018/12/27/ansible/</url>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://thislife001.github.io/"/>
-  <updated>2018-12-27T09:59:15.035Z</updated>
+  <updated>2019-01-24T06:03:39.935Z</updated>
   <id>https://thislife001.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>nginx.service</title>
+    <link href="https://thislife001.github.io/2019/01/24/nginx-service/"/>
+    <id>https://thislife001.github.io/2019/01/24/nginx-service/</id>
+    <published>2019-01-24T03:25:33.000Z</published>
+    <updated>2019-01-24T06:03:39.935Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Centos 7中添加自定义nginx启动脚本&lt;br&gt;在/usr/lib/systemd/system/下创建nginx.service&lt;br&gt;&lt;figure class=&quot;highlight routeros&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+    
+      <category term="nginx" scheme="https://thislife001.github.io/tags/nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>ansible</title>
