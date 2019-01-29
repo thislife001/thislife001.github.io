@@ -3,6 +3,21 @@
   
     
     <entry>
+      <title>rsync_ios_repo</title>
+      <link href="/2019/01/29/rsync-ios-repo/"/>
+      <url>/2019/01/29/rsync-ios-repo/</url>
+      <content type="html"><![CDATA[<p>1.清华大学镜像源：<br>HTTP  [<a href="https://mirrors.tuna.tsinghua.edu.cn]" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn]</a>   |<br>RSYNC [rsync://mirrors.tuna.tsinghua.edu.cn]<br>2.Centos历史版本官网：<br><a href="http://vault.centos.org" target="_blank" rel="noopener">http://vault.centos.org</a></p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> repo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>pxe+dhcp+tftp+nginx+ks部署Centos</title>
       <link href="/2019/01/24/ks-cfg/"/>
       <url>/2019/01/24/ks-cfg/</url>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://thislife001.github.io/"/>
-  <updated>2019-01-25T06:53:09.930Z</updated>
+  <updated>2019-01-29T08:42:04.791Z</updated>
   <id>https://thislife001.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>rsync_ios_repo</title>
+    <link href="https://thislife001.github.io/2019/01/29/rsync-ios-repo/"/>
+    <id>https://thislife001.github.io/2019/01/29/rsync-ios-repo/</id>
+    <published>2019-01-29T08:37:01.000Z</published>
+    <updated>2019-01-29T08:42:04.791Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;1.清华大学镜像源：&lt;br&gt;HTTP  [&lt;a href=&quot;https://mirrors.tuna.tsinghua.edu.cn]&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="repo" scheme="https://thislife001.github.io/tags/repo/"/>
+    
+  </entry>
   
   <entry>
     <title>pxe+dhcp+tftp+nginx+ks部署Centos</title>
