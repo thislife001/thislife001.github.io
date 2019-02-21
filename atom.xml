@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://thislife001.github.io/"/>
-  <updated>2019-01-29T08:42:04.791Z</updated>
+  <updated>2019-02-21T08:19:57.194Z</updated>
   <id>https://thislife001.github.io/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>手动构建Centos7.4 Base镜像</title>
+    <link href="https://thislife001.github.io/2019/02/21/docker-base-image/"/>
+    <id>https://thislife001.github.io/2019/02/21/docker-base-image/</id>
+    <published>2019-02-21T08:01:34.000Z</published>
+    <updated>2019-02-21T08:19:57.194Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;简介：&lt;br&gt;动手制作自己的Docker镜像，网上很多镜像供我们选择，为什么还要自己制作镜像呢？别人做的我不喜欢！！！&lt;br&gt;一、构建一个本地源；&lt;br&gt;方法有很多，自行百度即可，我这里使用内网搭建的源；&lt;br&gt;可参考：&lt;a href=&quot;https://thislife001.github.io/2019/01/24/ks-cfg/&quot;&gt;https://thislife001.github.io/2019/01/24/ks-cfg/&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Docker" scheme="https://thislife001.github.io/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ClamAV</title>
+    <link href="https://thislife001.github.io/2019/02/19/ClamAV/"/>
+    <id>https://thislife001.github.io/2019/02/19/ClamAV/</id>
+    <published>2019-02-19T08:12:13.000Z</published>
+    <updated>2019-02-21T08:01:27.766Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;一、安装依赖：&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+      <category term="ClamAV" scheme="https://thislife001.github.io/tags/ClamAV/"/>
+    
+  </entry>
   
   <entry>
     <title>rsync_ios_repo</title>
@@ -196,7 +239,7 @@
     <summary type="html">
     
       &lt;p&gt;一、bonding技术：&lt;br&gt;bonding(绑定)是一种linux系统下的网卡绑定技术，可以把服务器上n个物理网卡在系统内部抽象(绑定)成一个逻辑上的网卡，能够提升网络吞吐量、实现网络冗余、负载等功能，有很多优势。&lt;/p&gt;
-&lt;p&gt;bonding技术是linux系统内核层面实现的，它是一个内核模块(驱动)。使用它需要系统有这个模块, 我们可以modinfo命令查看下这个模块的信息, 一般来说都支持.&lt;br&gt;bonding的七种工作模式:&lt;br&gt;
+&lt;p&gt;bonding技术是linux系统内核层面实现的，它是一个内核模块(驱动)。使用它需要系统有这个模块, 我们可以modinfo命令查看下这个模块的信息, 一般来说都支持.&lt;br&gt;bonding的七种工作模式:&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -232,7 +275,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;本章的脚本是自己工作中生产环境在Centos 7.4中安装zabbix client的shell脚本，配合ansible使用，仅供参考&lt;br&gt;
+      &lt;p&gt;本章的脚本是自己工作中生产环境在Centos 7.4中安装zabbix client的shell脚本，配合ansible使用，仅供参考&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
